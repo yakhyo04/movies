@@ -54,11 +54,11 @@ function renderFilms(films, element){
         
         
         newLi.appendChild(newImg)
-        newLi.appendChild(newTitle)
-        newGenreList.appendChild(newGenreItem)
-        newLi.appendChild(newGenreList)
+        // newLi.appendChild(newTitle)
+        // newGenreList.appendChild(newGenreItem)
+        // newLi.appendChild(newGenreList)
         // newLi.appendChild(newOverview)
-        newLi.appendChild(newTime)
+        // newLi.appendChild(newTime)
         elList.appendChild(newLi);
 
     })

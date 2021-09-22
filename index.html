@@ -12,13 +12,15 @@
     
     <section class="films">
         <div class="container">
-            <h1 class="films__title">Films</h1>
+            <a class="films__title-link" href="./index.html"><h1 class="films__title">Films</h1></a>
             <form id="form">
+                <div class="form__div">
                 <input id="search" type="search" placeholder="search ...">
                 <select id="select">
-                    <option value="All" >All</option>
+                    <option value="All" class="option">All</option>
                 </select>
                 <button id="btn" type="submit">submit</button>
+            </div>
             </form>
             <ul class="films__card-wrapper"></ul>
         </div>

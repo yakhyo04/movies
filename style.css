@@ -3,6 +3,7 @@
 *::before{
     padding: 0;
     margin: 0;
+    background-color: #000;
 }
 .container{
     width: 1140px;
@@ -10,8 +11,9 @@
 }
 .films__title{
     text-align: center;
-    color: gold;
-    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    /* background-color: #fff; */
     padding: 10px;
     margin-bottom: 30px;
 }
@@ -28,10 +30,39 @@ img{
 .films__card{
     width: 250px;
     max-width: 100%;
-    padding: 5px 10px;
+    padding: 15px 20px;
     margin-bottom: 30px;
     border: 0.5px solid rgb(223, 218, 218);
     border-radius: 8px;
+    background-color: #fff;
+}
+.form__div{
+    position: relative;
+    left: 27%;
+    margin-bottom: 30px;
+}
+#search{
+    padding: 10px 40px;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fff;
+    border: 0.5px solid grey;
+}
+.films__title-link{
+    text-decoration: none;
+}
+#select{
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    color:rgb(141, 132, 132);
+    outline: none;
+}
+#btn{
+    padding: 10px ;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
 }
 .films__card:hover{
     box-shadow: 10px 10px 15px grey;
@@ -44,6 +75,9 @@ img{
     text-align: center;
     margin-top: 15px;
 }
+.films__genere-list{
+    background-color: #fff;
+}
 .films__genere-item{
     margin-top: 10px;
     text-align: center;
@@ -53,10 +87,19 @@ img{
     .container{
         width: 600px;
     }
+    .form__div{
+        left: 7%;
+    }
+    #search, #select, #btn{
+        padding: 5px;
+    }
 }
 
 @media (max-width: 500px){
     .container{
         width: 400px;
+    }
+    .form__div{
+        left: 17%;
     }
 }
