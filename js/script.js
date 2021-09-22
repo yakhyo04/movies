@@ -2,6 +2,7 @@ const elList = document.querySelector('.films__card-wrapper');
 const elForm = document.querySelector('#form');
 const elSearch = document.querySelector('#search');
 const elSelect = elForm.querySelector('#select');
+const elOption = elForm.querySelector('#option')
 
 function renderGenres(filmArr, element){
     let result = []
@@ -79,4 +80,21 @@ elForm.addEventListener('submit', (e) => {
     console.log(filteredArray)
 
     renderFilms(filteredArray, elList)
+})
+
+
+elSelect.addEventListener("change", (e) =>{
+    e.preventDefault();
+
+    let selectValue = elSelect.value.trim()
+    let selectArray = []
+   
+    if(selectValue == "All"){
+        selectArray = films
+    }else{
+        selectArray = films.filter((film) => {
+            return film.genres.includes(selectValue)
+        })
+    }
+    renderFilms(selectArray, elList)
 })

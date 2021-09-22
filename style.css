@@ -13,9 +13,11 @@
     text-align: center;
     color: #fff;
     font-size: 30px;
-    /* background-color: #fff; */
     padding: 10px;
     margin-bottom: 30px;
+}
+.films__title:hover{
+    color: red;
 }
 ul{
     list-style-type: none;
@@ -63,6 +65,7 @@ img{
     border-radius: 10px;
     border: none;
     background-color: #fff;
+    cursor: pointer;
 }
 .films__card:hover{
     box-shadow: 10px 10px 15px grey;
