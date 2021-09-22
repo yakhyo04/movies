@@ -39,6 +39,7 @@ img{
     background-color: #fff;
 }
 .form__div{
+    width: 700px;
     position: relative;
     left: 27%;
     margin-bottom: 30px;
@@ -91,7 +92,7 @@ img{
         width: 600px;
     }
     .form__div{
-        left: 7%;
+        left: 20%;
     }
     #search, #select, #btn{
         padding: 5px;
