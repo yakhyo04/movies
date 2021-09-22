@@ -91,15 +91,5 @@ elForm.addEventListener('submit', (e) => {
     let filteredArray = films.filter(film => film.title.match(regex))
     console.log(filteredArray)
 
-
-	// if(selectValue == "All") {
-	// 	// result = films
-    //     console.log(films)
-	// }else {
-	// 	result = films.filter((film) => {
-	// 		// return film.genres.includes(selectValue)
-    //         console.log(film.genres.includes(selectValue))
-	// 	})
-	// }
     renderFilms(filteredArray, elList)
 })
