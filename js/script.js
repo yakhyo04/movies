@@ -33,7 +33,6 @@ function renderFilms(films, element){
         let newGenreItem = document.createElement('li')
         let newTime = document.createElement('time');
         let newOverview = document.createElement('p')
-        // let newBtn = document.createElement('button')
         
         let date = new Date(film.release_date)
         let month = date.getMonth() +1;
@@ -61,7 +60,7 @@ function renderFilms(films, element){
         // newLi.appendChild(newOverview)
         newLi.appendChild(newTime)
         elList.appendChild(newLi);
-            
+
     })
 }
 
