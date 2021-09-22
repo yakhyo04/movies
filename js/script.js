@@ -62,18 +62,6 @@ function renderFilms(films, element){
         newLi.appendChild(newTime)
         elList.appendChild(newLi);
             
-        // newImg.onclick = function(){
-        //     newLi.appendChild(newTitle)
-        //     newGenreList.appendChild(newGenreItem)
-        //     newLi.appendChild(newGenreList)
-        //     newLi.appendChild(newOverview)
-        //     newLi.appendChild(newTime)
-        //     newLi.appendChild(newBtn)
-        // }
-        // newBtn.onclick = function (){
-        //     newBtn.style.display = none
-        // }
-    
     })
 }
 
