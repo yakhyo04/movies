@@ -30,7 +30,9 @@ img{
     border-radius: 5px;
 }
 .films__card{
-    width: 250px;
+    width: 150px;
+    width: 200px;
+    /* width: 250px; */
     max-width: 100%;
     padding: 15px 20px;
     margin-bottom: 30px;

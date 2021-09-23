@@ -4,6 +4,35 @@ const elSearch = document.querySelector('#search');
 const elSelect = elForm.querySelector('#select');
 const elOption = elForm.querySelector('#option')
 
+
+
+// function renderMovies(filmsArr, element){
+//     filmsArr.forEach((film) =>{
+//         const cloneTemplate = elTemplate.cloneNode(true)
+
+//         cloneTemplate.querySelector('.films__img').src = film.poster
+//         cloneTemplate.querySelector('.films__card-title').textContent = film.title
+
+//         element.appendChild(cloneTemplate)
+//     })
+// }
+
+// renderMovies(films, elList)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderGenres(filmArr, element){
     let result = []
     filmArr.forEach(film =>{
@@ -72,7 +101,7 @@ elForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     let searchValue = elSearch.value.trim()
-    let selectValue = elSelect.value.trim()
+    // let selectValue = elSelect.value.trim()
 
     const regex = new RegExp(searchValue, 'gi')
 
