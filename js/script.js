@@ -3,7 +3,7 @@ const elForm = document.querySelector('#form');
 const elSearch = document.querySelector('#search');
 const elSelect = elForm.querySelector('#select');
 const elOption = elForm.querySelector('#option');
-const elFilter = elForm.querySelector('.films__filter')
+const elFilter = elForm.querySelector('.films__filter');
 
 
 // function renderMovies(filmsArr, element){
@@ -94,7 +94,7 @@ elForm.addEventListener('submit', (e) => {
     const regex = new RegExp(searchValue, 'gi')
 
     let filteredArray = films.filter(film => film.title.match(regex))
-    console.log(filteredArray)
+    // console.log(filteredArray)
 
     if (selectValue === 'All') {
         selectArray = filteredArray
@@ -102,48 +102,49 @@ elForm.addEventListener('submit', (e) => {
         selectArray = filteredArray.filter(film => film.genres.includes(selectValue))
     }
 
-    if (filterValue === 'a_z') {
-        selectArray.sort((a,b) =>{
-            if (a.title > b.title) {
+    if(filterValue === 'a_z') {
+        selectArray.sort((a, b) =>{
+            if(a.title > b.title) {
                 return 1
-            }else if (a.title < b.title) {
+            }else if(a.title < b.title) {
                 return -1
             }else{
                 return 0
             }
         })
-    }else if (filterValue === 'z_a') {
-        selectArray.sort((a,b) =>{
-            if (a.title > b.title) {
+    }else if(filterValue === 'z_a') {
+        selectArray.sort((a, b) =>{
+            if(a.title > b.title) {
                 return -1
-            }else if (a.title < b.title) {
+            }else if(a.title < b.title) {
                 return 1
             }else{
                 return 0
             }
         })
-    }else if (filterValue === 'new_old') {
-        selectArray.sort((a,b) =>{
-            if (a.release_date > b.release_date) {
+    }else if(filterValue === 'new_old') {
+        selectArray.sort((a, b) =>{
+            if(a.release_date > b.release_date) {
                 return 1
-            }else if (a.release_date < b.release_date) {
+            }else if(a.release_date < b.release_date) {
                 return -1
             }else{
                 return 0
             }
         })
-    }else if (filterValue === 'old_new') {
-        selectArray.sort((a,b) =>{
-            if (a.release_date > b.release_date) {
+    }else if(filterValue === 'old_new') {
+        selectArray.sort((a, b) =>{
+            if(a.release_date > b.release_date) {
                 return -1
-            }else if (a.release_date < b.release_date) {
+            }else if(a.release_date < b.release_date) {
                 return 1
             }else{
                 return 0
             }
         })
     }
-
+     
     elSearch.value = null
+
     renderFilms(selectArray, elList)
 })
