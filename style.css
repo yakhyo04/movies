@@ -41,11 +41,16 @@ img{
     background-color: #fff;
 }
 .form__div{
-    width: 700px;
+    width: 800px;
     position: relative;
-    left: 27%;
+    left: 15%;
+    justify-content: space-between;
+    display: flex;
     margin-bottom: 30px;
 }
+/* .films__filter-wrapper{
+    display: flex;
+} */
 #search{
     padding: 10px 40px;
     border-radius: 10px;
@@ -105,10 +110,10 @@ img{
     .container{
         width: 400px;
     }
-    .form__div{
+    /* .form__div{
         width: 100px;
         left: 27%;
-    }
+    } */
     #select{
         padding: 6px 34px;
         margin: 20px 0 20px 0;

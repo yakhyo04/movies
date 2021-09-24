@@ -137,8 +137,28 @@ elForm.addEventListener('submit', (e) => {
                 return 0
             }
         })
+    }else if (filterValue === 'new_old') {
+        selectArray.sort((a,b) =>{
+            if (a.release_date > b.release_date) {
+                return 1
+            }else if (a.release_date < b.release_date) {
+                return -1
+            }else{
+                return 0
+            }
+        })
+    }else if (filterValue === 'old_new') {
+        selectArray.sort((a,b) =>{
+            if (a.release_date > b.release_date) {
+                return -1
+            }else if (a.release_date < b.release_date) {
+                return 1
+            }else{
+                return 0
+            }
+        })
     }
-    
+
     elSearch.value = null
     renderFilms(selectArray, elList)
 })
