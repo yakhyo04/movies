@@ -6,7 +6,6 @@ const elOption = elForm.querySelector('#option');
 const elFilter = elForm.querySelector('.films__filter')
 
 
-
 // function renderMovies(filmsArr, element){
 //     filmsArr.forEach((film) =>{
 //         const cloneTemplate = elTemplate.cloneNode(true)
@@ -19,20 +18,6 @@ const elFilter = elForm.querySelector('.films__filter')
 // }
 
 // renderMovies(films, elList)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function renderGenres(filmArr, element){
     let result = []
@@ -162,23 +147,3 @@ elForm.addEventListener('submit', (e) => {
     elSearch.value = null
     renderFilms(selectArray, elList)
 })
-
-
-// elForm.addEventListener("submit", (e) =>{
-//     e.preventDefault();
-
-//     const filteredFIlms = films.filter((film) => film.title.match(regex))
-//     let selectValue = elSelect.value.trim()
-//     let selectArray = []
-   
-//     if(selectValue == "All"){
-//         selectArray = films
-//     }else{
-//         selectArray = films.filter((film) => {
-//             return film.genres.includes(selectValue)
-//         })
-//     }
-
-
-//     renderFilms(selectArray, elList)
-// })
