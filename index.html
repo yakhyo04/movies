@@ -16,9 +16,18 @@
             <form id="form">
                 <div class="form__div">
                 <input id="search" type="search" placeholder="search ...">
+                <div class="films__filter-wrapper">
                 <select id="select">
                     <option value="All" class="option" id="option">All</option>
                 </select>
+                <select class="input films__filter" id="select">
+                    <option class="films__option" value="all">all</option>
+                    <option class="films__option" value="a_z">A_Z</option>
+                    <option class="films__option" value="z_a">Z_A</option>
+                    <option class="films__option" value="new_old">New_Old</option>
+                    <option class="films__option" value="old_new">Old_New</option>
+                </select>
+            </div>
                 <button id="btn" type="submit">submit</button>
             </div>
             </form>

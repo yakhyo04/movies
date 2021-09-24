@@ -2,7 +2,8 @@ const elList = document.querySelector('.films__card-wrapper');
 const elForm = document.querySelector('#form');
 const elSearch = document.querySelector('#search');
 const elSelect = elForm.querySelector('#select');
-const elOption = elForm.querySelector('#option')
+const elOption = elForm.querySelector('#option');
+const elFilter = elForm.querySelector('.films__filter')
 
 
 
@@ -100,30 +101,64 @@ renderFilms(films, elList)
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    let searchValue = elSearch.value.trim()
-    // let selectValue = elSelect.value.trim()
+    let searchValue = elSearch.value.trim();
+    let selectValue = elSelect.value.trim();
+    const filterValue = elFilter.value.trim();
+    let selectArray = []
 
     const regex = new RegExp(searchValue, 'gi')
 
     let filteredArray = films.filter(film => film.title.match(regex))
     console.log(filteredArray)
 
-    renderFilms(filteredArray, elList)
-})
-
-
-elSelect.addEventListener("change", (e) =>{
-    e.preventDefault();
-
-    let selectValue = elSelect.value.trim()
-    let selectArray = []
-   
-    if(selectValue == "All"){
-        selectArray = films
+    if (selectValue === 'All') {
+        selectArray = filteredArray
     }else{
-        selectArray = films.filter((film) => {
-            return film.genres.includes(selectValue)
+        selectArray = filteredArray.filter(film => film.genres.includes(selectValue))
+    }
+
+    if (filterValue === 'a_z') {
+        selectArray.sort((a,b) =>{
+            if (a.title > b.title) {
+                return 1
+            }else if (a.title < b.title) {
+                return -1
+            }else{
+                return 0
+            }
+        })
+    }else if (filterValue === 'z_a') {
+        selectArray.sort((a,b) =>{
+            if (a.title > b.title) {
+                return -1
+            }else if (a.title < b.title) {
+                return 1
+            }else{
+                return 0
+            }
         })
     }
+    
+    elSearch.value = null
     renderFilms(selectArray, elList)
 })
+
+
+// elForm.addEventListener("submit", (e) =>{
+//     e.preventDefault();
+
+//     const filteredFIlms = films.filter((film) => film.title.match(regex))
+//     let selectValue = elSelect.value.trim()
+//     let selectArray = []
+   
+//     if(selectValue == "All"){
+//         selectArray = films
+//     }else{
+//         selectArray = films.filter((film) => {
+//             return film.genres.includes(selectValue)
+//         })
+//     }
+
+
+//     renderFilms(selectArray, elList)
+// })
