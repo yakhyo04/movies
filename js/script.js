@@ -14,7 +14,8 @@ const elFilter = elForm.querySelector('.films__filter');
 //         cloneTemplate.querySelector('.films__card-title').textContent = film.title
 
 //         element.appendChild(cloneTemplate)
-//     })
+//     }).0
+
 // }
 
 // renderMovies(films, elList)
