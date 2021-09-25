@@ -2,6 +2,7 @@ const elList = document.querySelector('.films__card-wrapper');
 const elForm = document.querySelector('#form');
 const elSearch = document.querySelector('#search');
 const elSelect = elForm.querySelector('#select');
+const elSelect2 = elForm.querySelector('#select2');
 const elOption = elForm.querySelector('#option');
 const elFilter = elForm.querySelector('.films__filter');
 
@@ -15,7 +16,6 @@ const elFilter = elForm.querySelector('.films__filter');
 
 //         element.appendChild(cloneTemplate)
 //     }).0
-
 // }
 
 // renderMovies(films, elList)
@@ -87,33 +87,34 @@ renderFilms(films, elList)
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    let searchValue = elSearch.value.trim();
-    let selectValue = elSelect.value.trim();
+    const searchValue = elSearch.value.trim();
+    const selectValue = elSelect.value.trim();
+    const selectValue2 = elSelect2.value.trim();
     const filterValue = elFilter.value.trim();
-    let selectArray = []
-
-    const regex = new RegExp(searchValue, 'gi')
-
-    let filteredArray = films.filter(film => film.title.match(regex))
+    const regex = new RegExp(searchValue, 'gi');
+    
+    const filteredArray = films.filter((film) => film.title.match(regex));
     // console.log(filteredArray)
-
+    
+    let selectArray = []
+    
     if (selectValue === 'All') {
         selectArray = filteredArray
     }else{
         selectArray = filteredArray.filter(film => film.genres.includes(selectValue))
     }
 
-    if(filterValue === 'a_z') {
+    if(selectValue2 === 'a_z') {
         selectArray.sort((a, b) =>{
             if(a.title > b.title) {
-                return 1
+                return 1    
             }else if(a.title < b.title) {
                 return -1
             }else{
                 return 0
             }
         })
-    }else if(filterValue === 'z_a') {
+    } if(selectValue2 === 'z_a') {
         selectArray.sort((a, b) =>{
             if(a.title > b.title) {
                 return -1
@@ -123,7 +124,7 @@ elForm.addEventListener('submit', (e) => {
                 return 0
             }
         })
-    }else if(filterValue === 'new_old') {
+    }if(selectValue2 === 'new_old') {
         selectArray.sort((a, b) =>{
             if(a.release_date > b.release_date) {
                 return 1
@@ -133,7 +134,7 @@ elForm.addEventListener('submit', (e) => {
                 return 0
             }
         })
-    }else if(filterValue === 'old_new') {
+    }if(selectValue2 === 'old_new') {
         selectArray.sort((a, b) =>{
             if(a.release_date > b.release_date) {
                 return -1
@@ -144,7 +145,6 @@ elForm.addEventListener('submit', (e) => {
             }
         })
     }
-     
     elSearch.value = null
 
     renderFilms(selectArray, elList)
