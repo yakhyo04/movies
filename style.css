@@ -61,14 +61,7 @@ img{
 .films__title-link{
     text-decoration: none;
 }
-#select{
-    padding: 10px 40px;
-    border-radius: 10px;
-    background-color: #fff;
-    color:rgb(141, 132, 132);
-    outline: none;
-}
-#select2{
+#select, #select2{
     padding: 10px 40px;
     border-radius: 10px;
     background-color: #fff;
