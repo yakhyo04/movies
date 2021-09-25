@@ -98,10 +98,18 @@ img{
     .container{
         width: 600px;
     }
-    .form__div{
-        left: 20%;
-    }
     #search, #select, #btn{
+        padding: 5px;
+    }
+    .form__div{
+        width: auto;
+        display: block;
+        left: 300%;
+    }
+    #form{
+        width: 10%;
+    }
+    #select, #select2{
         padding: 5px;
     }
 }
@@ -110,10 +118,6 @@ img{
     .container{
         width: 400px;
     }
-    /* .form__div{
-        width: 100px;
-        left: 27%;
-    } */
     #select{
         padding: 6px 34px;
         margin: 20px 0 20px 0;
