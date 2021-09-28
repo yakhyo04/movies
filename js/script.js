@@ -60,6 +60,7 @@ function renderFilms(films, element){
         newLi.setAttribute('class', 'films__card');
         newTime.setAttribute('datetime', `${day}.${month}.${year}`);
         newTime.textContent = `${day}.${month}.${year}`;
+        newTime.setAttribute('class', 'films__time')
         newGenreList.setAttribute('class', 'films__genere-list');
         newGenreItem.setAttribute('class', 'films__genere-item');
         newOverview.setAttribute('class', 'films__overview');
@@ -75,9 +76,10 @@ function renderFilms(films, element){
         // newGenreList.appendChild(newGenreItem)
         // newLi.appendChild(newGenreList)
         // newLi.appendChild(newOverview)
-        // newLi.appendChild(newTime)
+        // newLi.appendChild(newTime)        
         elList.appendChild(newLi);
-
+        
+        
     })
 }
 
@@ -103,7 +105,7 @@ elForm.addEventListener('submit', (e) => {
     }else{
         selectArray = filteredArray.filter(film => film.genres.includes(selectValue))
     }
-
+    
     if(selectValue2 === 'a_z') {
         selectArray.sort((a, b) =>{
             if(a.title > b.title) {
@@ -146,6 +148,6 @@ elForm.addEventListener('submit', (e) => {
         })
     }
     elSearch.value = null
-
+    
     renderFilms(selectArray, elList)
 })

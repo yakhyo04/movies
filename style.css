@@ -19,6 +19,18 @@
 .films__title:hover{
     color: red;
 }
+.films__sub-title{
+    background-color: #fff;
+}
+.films__overview{
+    background-color: #fff;
+}
+.films__genere-item{
+    background-color: #fff;
+}
+.films__time{
+    background-color: #fff;
+}
 ul{
     list-style-type: none;
     display: flex;
@@ -53,27 +65,33 @@ img{
 } */
 #search{
     padding: 10px 40px;
-    border-radius: 10px;
     outline: none;
     background-color: #fff;
     border: 0.5px solid grey;
+}
+#search:hover{
+    background-color: rgb(156, 148, 148);
+    color: #fff;
+    font-size: 20px;
+    padding: 0 0 0 30px;
 }
 .films__title-link{
     text-decoration: none;
 }
 #select, #select2{
     padding: 10px 40px;
-    border-radius: 10px;
     background-color: #fff;
     color:rgb(141, 132, 132);
     outline: none;
 }
 #btn{
-    padding: 10px ;
-    border-radius: 10px;
+    padding: 10px 30px;
     border: none;
     background-color: #fff;
     cursor: pointer;
+}
+#btn:hover{
+    background-color: rgb(218, 211, 211);
 }
 .films__card:hover{
     box-shadow: 10px 10px 15px grey;
@@ -100,17 +118,26 @@ img{
     }
     #search, #select, #btn{
         padding: 5px;
+        margin-bottom: 10px;
     }
     .form__div{
         width: auto;
         display: block;
-        left: 300%;
+        left: 350%;
     }
     #form{
         width: 10%;
     }
     #select, #select2{
+        width: 180px;
         padding: 5px;
+        margin-bottom: 10px;
+    }
+    #btn{
+        width: 180px;
+    }
+    .films__card{
+        width: 250px;
     }
 }
 
@@ -120,9 +147,14 @@ img{
     }
     #select{
         padding: 6px 34px;
-        margin: 20px 0 20px 0;
     }
     #btn{
         padding: 7px 70px;
+    }
+    .form__div{
+        left: 270%;
+    }
+    .films__card{
+        width: 300px;
     }
 }
